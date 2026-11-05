@@ -13,7 +13,7 @@ No WordPress, no database, no build step — plain HTML, CSS and JavaScript that
 | `locations.html` | Our Locations — all 49 properties by category |
 | `contact.html` | Contact Us — details, map and feedback form |
 
-Assets (styles, script, images) are in `assets/`.
+Styles and script are in `assets/`; all images are in `img/`.
 
 ## View it locally
 

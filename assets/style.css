@@ -33,7 +33,7 @@ h2{font-size:1.7rem}
 .nav-toggle{display:none;background:none;border:none;color:#fff;font-size:1.6rem;margin-left:auto;cursor:pointer}
 
 /* Hero */
-.hero{background:linear-gradient(rgba(10,32,54,.72),rgba(10,32,54,.72)),url('img/qtq80-vEx5zf.jpeg') center/cover no-repeat;color:#fff;text-align:center;padding:110px 0}
+.hero{background:linear-gradient(rgba(10,32,54,.72),rgba(10,32,54,.72)),url('../img/qtq80-vEx5zf.jpeg') center/cover no-repeat;color:#fff;text-align:center;padding:110px 0}
 .hero h1{color:#fff;font-size:2.6rem;margin-bottom:6px}
 .hero-tag{color:var(--gold);font-size:1.3rem;font-weight:700;letter-spacing:.06em;margin:0 0 16px}
 .hero-quote{font-size:1.15rem;font-style:italic;max-width:760px;margin:0 auto 26px}
