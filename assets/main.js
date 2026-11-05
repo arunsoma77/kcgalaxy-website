@@ -1,5 +1,23 @@
-// Animated counters (KC Galaxy homepage)
+// KC Galaxy — scroll reveal + animated counters
 (function () {
+  // Scroll reveal: tag blocks, fade them up as they enter the viewport
+  var blocks = document.querySelectorAll('.section, .exp-card, .loc-card, .step, .exec, .staff-card, .counter');
+  blocks.forEach(function (el, i) {
+    el.classList.add('rv');
+    el.style.transitionDelay = (i % 3) * 80 + 'ms';
+  });
+  if ('IntersectionObserver' in window) {
+    var rio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); rio.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    blocks.forEach(function (el) { rio.observe(el); });
+  } else {
+    blocks.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Animated counters (homepage)
   var nums = document.querySelectorAll('.counter .num');
   if (!nums.length) return;
   function animate(el) {
