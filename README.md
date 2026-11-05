@@ -24,7 +24,24 @@ python3 -m http.server 8000
 # then open http://localhost:8000
 ```
 
-## Publish with GitHub Pages
+## Publish with Netlify (current deployment)
+
+The repo root is the site root and a `netlify.toml` is included
+(`publish = "."`, no build command), so Netlify deploys it as-is:
+
+1. In Netlify: **Add new site → Import an existing project → GitHub**.
+2. Pick the `kcgalaxy-website` repository, branch `main`.
+3. Build settings are read from `netlify.toml` — leave build command empty and
+   publish directory as the repository root.
+4. Deploy. The site goes live at its `*.netlify.app` address, and every future
+   push to `main` redeploys automatically.
+
+To use the real domain later: Netlify **Domain management → Add custom domain**
+`kcgalaxy.com`, then update the domain's DNS as Netlify instructs. That moves
+the live domain off WordPress — only do it when the Netlify preview looks right.
+(The `CNAME` file in this repo is a GitHub Pages mechanism; Netlify ignores it.)
+
+## Publish with GitHub Pages (alternative)
 
 1. Push this folder to a GitHub repository.
 2. In the repository: **Settings → Pages → Source: Deploy from a branch**, branch `main`, folder `/ (root)`.

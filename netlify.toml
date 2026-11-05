@@ -1,0 +1,4 @@
+# KC Galaxy — static site, no build step.
+# The repository root is the site root: Netlify should publish it as-is.
+[build]
+  publish = "."
